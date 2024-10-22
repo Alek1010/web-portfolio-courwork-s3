@@ -1,0 +1,387 @@
+/* apply global styles to all elements*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+/* styles the body elements*/
+body{
+    background-color: white;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 3s linear infinite, fadeOut 3s forwards;
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Hide the spinner after it fades out */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+/* Additional styling for your content */
+.content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s 2s forwards, slideIn 2s 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+
+/* styles the header section*/
+header{
+   
+    display: flex; /* uses the flexbox layout insde the header for responsivness*/                                                      
+    justify-content: space-between;/* puts content  in the nav at the edges*/
+    align-items: center; /* puts the text in the centre of the nav bar*/
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray */
+    border-bottom: 2px solid #3498db; /* Adds a blue line below the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*style logo text in the header*/
+.logo h1{
+   
+    font-size: 35px;
+    font-style: italic;
+    text-shadow: 2px 2px #777;
+}   
+
+
+/* colors half of my name in the logo*/
+span{
+    color: #2a8bf2;
+}
+/* when mouse hovers over it the rest of my name turns blue and gets enlarged by 1.1*/
+.logo:hover{
+    color: #2a8bf2;
+    text-shadow: 0  0   25px #2a8bf2,0   0   50px    #2a8bf2;
+    transform: scale(1.1);
+
+}
+
+
+
+/* styles indivigual navigation links*/
+nav a{
+    
+    margin-left: 20px;
+    text-decoration: none;
+    padding-top: 15px ;
+    color: #333;
+    border-top: 3px solid rgba(0, 100, 245, 0);
+    border-bottom: 3px solid rgba(0, 100, 245, 0);
+
+}
+
+
+/* changes the links color when the mouse hovers over them*/
+
+
+
+nav a:hover{
+    border-top: 3px solid rgb(0, 100, 245);
+    color: rgb(0, 100, 245);
+}
+
+
+
+
+main{
+    padding: 40px 200px 40px 200px;
+    
+}
+
+/* Main container for better alignment and responsiveness */
+.container {
+    max-width: 1200px; /* Sets the maximum width for the content */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Adds padding around the container */
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+/* Style for the home section */
+.home {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 40px; /* Adds space above the home section */
+    gap: 20px; /* Space between elements */
+}
+
+/* Style for the text content in the home section */
+.home-content {
+    flex: 1; /* Allows content to grow/shrink as needed */
+    max-width: 600px; /* Sets a maximum width for the text */
+}
+
+
+
+.home-content h1 span {
+    color: #2a8bf2; /* Highlighted color for the name */
+    
+}
+
+
+
+/* Style for the image box in the home section */
+.img-box {
+    flex: 1; /* Allows the image box to grow/shrink as needed */
+    max-width: 400px; /* Sets a maximum width for the image */
+    text-align: center; /* Centers the image inside the box */
+}
+
+.img-box img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Keeps the image aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow below the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.img-box img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+
+/*css for projects */
+/* Styles for the projects section */
+.projects {
+    padding: 60px 20px; /* Space around the section */
+    background-color: #f5f5f5; /* Light gray background for the section */
+    text-align: center; /* Centers the text inside this section */
+}
+
+.projects h2 {
+    font-size: 2.5rem; /* Larger font size for the section title */
+    margin-bottom: 40px; /* Space below the title */
+    color: #333; /* Dark gray text color */
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Container for the project cards, using a grid layout */
+.project-cards {
+    display: grid; /* Using grid layout to arrange cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive columns that adapt to screen size */
+    gap: 20px; /* Space between each card */
+}
+
+/* Styling each project card */
+.project-card {
+    background: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    overflow: hidden; /* Ensures content stays inside the card, especially with rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth transition when hovered */
+}
+
+/* Slight zoom effect when hovering over a card */
+.project-card:hover {
+    transform: scale(1.05); /* Increases size by 5% */
+}
+
+/* Image inside the project card */
+.project-card img {
+    width: 100%; /* Makes the image fill the card width */
+    height: 200px; /* Sets a fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+/* Container for the project details */
+.project-info {
+    padding: 20px; /* Space inside the info section */
+}
+
+.project-info h3 {
+    font-size: 1.5rem; /* Larger font for project titles */
+    margin-bottom: 10px; /* Space below the title */
+    color: #3498db; /* Blue color for project titles */
+}
+
+.project-info p {
+    font-size: 1rem; /* Standard font size for the project description */
+    color: #666; /* Gray color for the description */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+/* Styles for the action buttons (e.g., View Code, Live Demo) */
+.btn {
+    display: inline-block; /* Displays the buttons as inline blocks */
+    background-color: #2a8bf2; /* Blue background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Space inside the button */
+    margin: 5px; /* Space between buttons */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+/* Changes the button color when hovering */
+.btn:hover {
+    background-color: #1a5db8; /* Darker blue on hover */
+}
+
+
+
+/* css for the newsletter*/
+
+input[type=text],input[type=submit]{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=checkbox]{
+    margin-top: 16px;
+}
+
+input[type=submit]{
+    background-color: #2a8bf2;
+    color: white;
+    border: none;
+}
+
+input[type=submit]:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Styling for the footer */
+footer {
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    padding: 20px; /* Space inside the footer */
+    text-align: center; /* Center-aligns the footer text */
+    font-size: 14px; /* Smaller font for footer information */
+    color: #555; /* Light gray text color */
+    margin-top: 40px; /* Space above the footer */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow above the footer */
+}
+
+/* Style for the footer content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between elements in the footer */
+}
+
+.footer-content p {
+    margin: 0;
+    color: #555; /* Light gray text for the copyright */
+    font-size: 14px; /* Smaller font for a less dominant appearance */
+}
+
+/* Style for the social media links */
+.social-links {
+    display: flex;
+    gap: 15px; /* Space between each icon */
+}
+
+.social-links a {
+    color: #2a8bf2; /* Matching the theme color for the icons */
+    font-size: 20px; /* Adjust size of the icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-links a:hover {
+    color: #3498db; /* Slightly darker blue on hover */
+    transform: scale(1.1); /* Enlarge the icons slightly when hovered */
+}
+
+.social-links a:focus {
+    outline: none; /* Removes the default outline for better appearance */
+    transform: scale(1.1); /* Keeps the same effect as hover */
+}
+
+
+
+
+
+
+@media(max-width: 768px){
+    .container{
+        background-color: white;
+    }
+    header {
+        flex-direction: column;
+        box-shadow: none;
+        padding: 0px;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;    
+    }
+    
+    nav a {
+        flex-basis: 50%;
+        text-align: center;
+        border-bottom: 3px solid rgba(194, 194, 194, 0.9);
+        margin-left: 0px;   
+    }
+
+    nav a:hover {
+        border-bottom: 3px solid rgb(0,100,245);
+        border-top: 3px solid rgba(30,100,245,0);
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .img-box {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+
