@@ -608,10 +608,7 @@ footer {
         background-color: #f5f5f5;
     }
 
-    header::after{
-        background:none I !important;
-    }
-
+    
     nav a:hover{
         border-top: 3px solid #2a8bf2;
         color:#2a8bf2;
