@@ -19,13 +19,18 @@
         </div>
         <nav>
             <a href="#">About</a>
-            <a href="#">Personal Projects</a>
-            <a href="#">News Letter</a>
+            <a href="#s">Skills section</a>
+            <a href="#e">education</a>
+            <a href="#so">Socials</a>
+            <a href="#p">Personal Projects</a>
+            <a href="#n">News Letter</a>
+
         </nav>
     </header>
     <main class="container">
         <section class="home">
             <div class="home-content">
+                <h1 class="home-title">About</h1>
                 <h3>Hi</h3>
                 <h1>I'm <span>Alek<br></span>a second year computer science student</h1>
                 <p>The modules which i have chosen to do for my second year of university is Advanced Client side, OOP(Object oriented Programming),DBMS(data base management systems) and mobile aplication development
@@ -36,7 +41,62 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="skills" id="s">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Frameworks & Tools</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Git & GitHub</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Teamwork & Collaboration</li>
+                        <li>Problem-Solving</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="education" id="e">
+            <h2>Education</h2>
+            <div class="education-info">
+                <div class="school">
+                    <h3>BSc Computer Science, University of Westminster</h3>
+                    <time datetime="2023">2023 - Present</time>
+                    <p>Second-year student with a focus on software development, data structures, and algorithms.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="social-media-section" id="so">
+            <h2>Connect with me</h2>
+            <div class="social-link">
+                <a href="https://www.linkedin.com/in/aleksandar-mihaylov-2725252b6/" target="_blank" class="social-icons"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/Alek1010" target="_blank" class="social-icons"><i class="fab fa-github"></i>GitHub</a>
+                <a href="mailto:ali.mihaylov04@gmail.com" target="_blank" class="social-icons"><i class="fas fa-envelope"></i>Email</a>
+            </div>
+        </section>
+
+
+        <section class="projects" id="p">
             <h2>My Projects</h2>
             <div class="project-cards">
                 <div class="project-card">
@@ -111,7 +171,7 @@
         </section>
 
 
-        <section class="news-letter">
+        <section class="news-letter" id="n">
             <form>
                 <div class="container">
                     <h2>Subscribe to our news letter</h2>
@@ -155,5 +215,8 @@
         </div>
     </footer>
 </div>
+
+
+
 </body>
 </html><html>
