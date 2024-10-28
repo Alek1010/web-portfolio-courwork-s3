@@ -204,18 +204,19 @@ main{
 }
 
 .skill h3{
-    color: #2a8bf2;
+    
     margin-bottom: 5px;
     margin-top: 10px;
+    text-align: center;
 }
 .skills , .education{
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    
 }
 
-.skill-list{
+.skills-list{
     display: flex;
     justify-content: space-between;
 }
@@ -224,6 +225,30 @@ main{
     list-style-type: none;
     padding: 0;
 }
+
+.skills-list>.skill:first-child {
+    
+    font-weight: bold; /* Make the first skill bold */
+}
+
+.skill:nth-child(even) {
+    background-color: #2a8bf2; /* Light background for even skill sections */
+    border-radius: 8px;
+    color: white;
+}
+
+.skills + .education {
+    margin-top: 20px; /* Add space between skills and education sections */
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -261,6 +286,7 @@ main{
     background-color: #2a8bf2;
     color: #fff;
 }
+
 
 
 
@@ -302,6 +328,11 @@ main{
 .project-card:hover {
     transform: scale(1.05); /* Increases size by 5% */
 }
+
+.project-cards > .project-card:last-child {
+    border: 2px solid #0d6efd; /* Highlight the last project card */
+}
+
 
 /* Image inside the project card */
 .project-card img {
@@ -463,6 +494,21 @@ main{
     transition: background-color 0.3s ease;
 }
 
+.blog-excerpt::before {
+    content: "“"; /* Opening quote */
+    
+    color: #888;
+    margin-right: 1px;
+}
+
+.blog-excerpt::after {
+    content: "”"; /* Closing quote */
+    
+    color: #888;
+    
+}
+
+
 .read-more:hover{
     background-color: #1a5db8;
 }
@@ -487,11 +533,18 @@ main{
 /* css for the newsletter*/
 
 
+/* Style required form fields */
+input[required] {
+    
+    background-color: #fff5f5;
+}
+
 
 /* Styles when input is valid */
 input[type="text"]:valid,
 input[type="email"]:valid {
     border-color: green; /* Change border to green when valid */
+   
 }
 
 input[type="text"]:invalid,
@@ -499,12 +552,6 @@ input[type="email"]:invalid {
     border-color: red; /* Change border to red when invalid */
 }
 
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-    outline: none; /* Remove default outline */
-    border-color: black; 
-}
 
 
 
@@ -536,6 +583,10 @@ input[type=submit]:hover{
     cursor: pointer;
 }
 
+/* Style the checkbox for the newsletter */
+input[name="subscribe"] {
+    accent-color: #2a8bf2; /* Custom color for the checkbox */
+}
 
 
 
@@ -590,6 +641,12 @@ footer {
     outline: none; /* Removes the default outline for better appearance */
     transform: scale(1.1); /* Keeps the same effect as hover */
 }
+
+.footer-content > .social-links > .social-icon {
+    margin-right: 10px; /* Space between social icons */
+    
+}
+
 
 
 
